@@ -1,6 +1,6 @@
 class Funcionario1 {
-  nome: string;
-  salario: number;
+  public nome: string;
+  private salario: number;
 
   constructor(nome: string, salario: number) {
     this.nome = nome;
