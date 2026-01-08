@@ -1,0 +1,17 @@
+<p class="paragraf">Formulário de Cadastro</p>
+
+<form [formGroup]="formulario">
+    <label for="">Nome</label>
+    <input type="text" formControlName="nome">
+
+    <label for="">Email</label>
+    <input type="text" formControlName="email">
+
+    <label for="">Celular</label>
+    <input type="text" formControlName="celular">
+
+    <label for="">Senha</label>
+    <input type="text" formControlName="senha">
+
+    <button (click)="criar()"> Criar </button>
+</form>
