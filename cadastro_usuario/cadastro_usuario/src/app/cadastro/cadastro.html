@@ -33,7 +33,7 @@
     </thead>
     <tbody>
         <tr *ngFor="let usuario of usuarios">
-            <td><button (click)="excluir(usuario)">Excluir</button></td>
+            <td><button (click)="excluir(usuario.id)">Excluir</button></td>
             <td>{{ usuario.id }}</td>
             <td>{{ usuario.nome }}</td>
             <td>{{ usuario.email }}</td>

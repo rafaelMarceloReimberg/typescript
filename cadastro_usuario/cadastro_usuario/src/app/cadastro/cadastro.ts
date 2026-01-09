@@ -38,8 +38,8 @@ export class Cadastro {
     this.formulario.reset();
   }
 
-  excluir(usuario: Usuario){
-    this.usuarios = this.usuarios.filter(u => u !== usuario);
+  excluir(id: number){
+    this.usuarios = this.usuarios.filter(u => u.id !== id);
   }
 
 }
