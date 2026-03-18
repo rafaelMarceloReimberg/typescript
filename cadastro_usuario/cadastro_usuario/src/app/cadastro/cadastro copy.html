@@ -1,0 +1,43 @@
+<h2 class="paragraf">Formulário de Cadastro</h2>
+
+<form [formGroup]="formulario" class="form-cadastro">
+    <label for="">ID</label>
+    <input type="text" formControlName="id">
+
+    <label for="">Nome</label>
+    <input type="text" formControlName="nome">
+
+    <label for="">Email</label>
+    <input type="text" formControlName="email">
+
+    <label for="">Celular</label>
+    <input type="number" formControlName="celular">
+
+    <label for="">Senha</label>
+    <input type="password" formControlName="senha">
+
+    <button (click)="criar()"> Criar </button>
+</form>
+
+<h2>Usuários cadastrados</h2>
+
+<table border="1" width="100%">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Celular</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let usuario of usuarios">
+            <td><button (click)="excluir(usuario.id)">Excluir</button></td>
+            <td>{{ usuario.id }}</td>
+            <td>{{ usuario.nome }}</td>
+            <td>{{ usuario.email }}</td>
+            <td>{{ usuario.celular }}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,45 @@
+<form [formGroup]="formulario" (ngSubmit)="criar()">
+  <label>Nome</label>
+  <input type="text" formControlName="nome">
+ 
+  <label>E-mail</label>
+  <input type="email" formControlName="email">
+ 
+  <label>Celular</label>
+  <input type="text" formControlName="celular">
+ 
+  <label>Senha</label>
+  <input type="password" formControlName="senha">
+ 
+  <button type="submit" [disabled]="formulario.invalid">
+    Salvar
+  </button>
+</form>
+ 
+<hr>
+ 
+<h3>Usuários da API</h3>
+ 
+<table border="1" width="100%">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+ 
+  <tbody>
+    @for (usuario of usuarios(); track usuario.id) {
+      <tr>
+        <td>{{ usuario.id }}</td>
+        <td>{{ usuario.nome }}</td>
+        <td>{{ usuario.email }}</td>
+        <td>
+          <button (click)="excluir(usuario.id)">Excluir</button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

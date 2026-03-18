@@ -49,7 +49,9 @@ app.post("/", async (req, res) => {
 
 app.listen(port, () => {
   mongoose.connect(
-    "mongodb+srv://raaafaelreimberg:Rafa1906@reimberg.um1wl.mongodb.net/?retryWrites=true&w=majority&appName=Reimberg"
+    "mongodb+srv://raaafaelreimberg:Rafa180687@reimberg.um1wl.mongodb.net/?appName=Reimberg"
   );
   console.log("App running");
 });
+
+
