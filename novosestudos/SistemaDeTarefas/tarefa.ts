@@ -10,7 +10,7 @@ function criarTarefa(titulo: string): Tarefa {
   const nova: Tarefa = {
     id: Date.now(),
     titulo,
-    concluida: false
+    concluida: false,
   };
 
   tarefas.push(nova);
@@ -18,13 +18,13 @@ function criarTarefa(titulo: string): Tarefa {
 }
 
 function listarTarefas(): void {
-  tarefas.forEach(t => {
+  tarefas.forEach((t) => {
     console.log(`${t.id} - ${t.titulo} [${t.concluida ? "✔" : "❌"}]`);
   });
 }
 
 function concluirTarefa(id: number): void {
-  const tarefa = tarefas.find(t => t.id === id);
+  const tarefa = tarefas.find((t) => t.id === id);
 
   if (tarefa) {
     tarefa.concluida = true;
